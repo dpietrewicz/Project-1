@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="Project-1.css" />
+        <link rel="shortcut icon" type="image/png" href="img/zloty.png" />
+        <title>Domowy budżet</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <img
+                    src="img/logo.png"
+                    alt="Domowy budzet logo"
+                    class="logo-image"
+                />
+                <div class="summary-container-top">
+                    <h4 id="total-name">Twój bilans</h4>
+                    <span id="total-amount"></span>
+                    <p>PLN</p>
+                </div>
+            </header>
+
+            <!-- INCOMES -->
+            <main class="main">
+                <div>
+                    <h2 class="main-name">Przychody</h2>
+                    <form id="income-container">
+                        <input
+                            type="text"
+                            name="incomeTitle"
+                            class="description"
+                            id="search-input-income"
+                            placeholder="Nazwa przychodu"
+                        />
+                        <input
+                            type="number"
+                            name="incomeAmount"
+                            class="amount"
+                            id="amount-income"
+                            placeholder="Kwota"
+                            step="0.01"
+                        />
+
+                        <button
+                            class="add-btn-income"
+                            id="btn-income"
+                            type="submit"
+                        >
+                            Dodaj
+                        </button>
+                    </form>
+                    <p id="income-alert"></p>
+                </div>
+
+                <!-- OUTCOMES -->
+                <div>
+                    <h2 class="main-name">Wydatki</h2>
+                    <form id="outcome-container">
+                        <input
+                            type="text"
+                            name="outcomeTitle"
+                            class="description"
+                            id="search-input-outcome"
+                            placeholder="Nazwa wydatku"
+                        />
+                        <input
+                            type="number"
+                            name="outcomeAmount"
+                            class="amount"
+                            id="amount-outcome"
+                            placeholder="Kwota"
+                            step="0.01"
+                        />
+                        <button
+                            class="add-btn-outcome"
+                            id="btn-outcome"
+                            type="submit"
+                        >
+                            Dodaj
+                        </button>
+                    </form>
+                    <p id="outcome-alert"></p>
+                </div>
+            </main>
+
+            <div class="list-container">
+                <div class="list">
+                    <ul id="income-list"></ul>
+                </div>
+                <div class="list">
+                    <ul id="outcome-list"></ul>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div id="total-income-sum"></div>
+                <div id="total-outcome-sum"></div>
+            </footer>
+        </div>
+        <form class="modal" id="edit-form">
+            <label for="edit-form-name">Nazwa</label>
+            <input type="text" id="edit-form-name" required />
+            <label for="edit-form-amount">Kwota</label>
+            <input
+                type="number"
+                id="edit-form-amount"
+                required
+                min="0.01"
+                step="0.01"
+            />
+            <button
+                type="submit"
+                id="add-btn-save"
+                class="add-btn-default add-btn-outcome-save"
+            >
+                Zapisz
+            </button>
+
+            <button type="button" id="add-btn-cancel" class="add-btn-default">
+                Anuluj
+            </button>
+        </form>
+        <script src="Project-1.js"></script>
+    </body>
+</html>
