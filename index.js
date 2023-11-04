@@ -32,13 +32,13 @@ const updateTotalBalance = () => {
 
     if (total === 0) {
         totalName.textContent = `Bilans wynosi`;
-        totalAmount.textContent = total;
+        totalAmount.textContent = parseFloat(total).toFixed(2);
     } else if (total >= 0) {
         totalName.textContent = `Możesz jeszcze wydać`;
-        totalAmount.textContent = total;
+        totalAmount.textContent = parseFloat(total).toFixed(2);
     } else if (total <= 0) {
         totalName.textContent = `Bilans jest ujemny`;
-        totalAmount.textContent = Math.abs(total);
+        totalAmount.textContent = parseFloat(Math.abs(total)).toFixed(2);
     }
 };
 

@@ -62,7 +62,7 @@ body {
     justify-content: center;
 }
 
-#total-amount {
+.total-amount-top {
     margin: 0 10px 0 10px;
 }
 
@@ -109,8 +109,7 @@ body {
     cursor: pointer;
 }
 
-#income-alert,
-#outcome-alert {
+.add-alert {
     color: var(--color-red-dark);
     font-size: small;
 }
@@ -159,12 +158,7 @@ body {
     border-radius: 15px;
 }
 
-#edit-form-name {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#edit-form-amount {
+.edit-form-titles {
     margin-left: 5px;
     margin-right: 5px;
 }
