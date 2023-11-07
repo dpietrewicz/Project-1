@@ -48,7 +48,9 @@ const getTotalIncomes = () => incomes.reduce((a, b) => a + Number(b.amount), 0);
 
 const updateTotalIncomes = () => {
     const sumIncome = getTotalIncomes();
-    totalIncomeSum.textContent = `Suma przychodów: ${sumIncome} zł`;
+    totalIncomeSum.textContent = `Suma przychodów: ${parseFloat(
+        sumIncome
+    ).toFixed(2)} zł`;
 };
 
 function renderIncomesList() {
@@ -165,7 +167,9 @@ const getTotalOutcomes = () =>
 
 const updateTotalOutcomes = () => {
     const sumOutcome = getTotalOutcomes();
-    totalOutcomeSum.textContent = `Suma wydatków: ${sumOutcome} zł`;
+    totalOutcomeSum.textContent = `Suma wydatków: ${parseFloat(
+        sumOutcome
+    ).toFixed(2)} zł`;
 };
 
 function renderOutcomeList() {
