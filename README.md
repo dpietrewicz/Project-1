@@ -1,3 +1,3 @@
-# Project-1 - Future Collars
+# Project_1 - Future Collars
 
-Project 1 - Budget App - Future Collars
+JS - Budget App
