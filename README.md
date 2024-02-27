@@ -2,4 +2,4 @@
 
 JS - Budget App
 
-Netlify: https://main--project-1-budget-app.netlify.app/
+[![Netlify Status](Netlify: https://main--project-1-budget-app.netlify.app/)
